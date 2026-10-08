@@ -38,7 +38,7 @@ export default function NewsletterForm({
     <form onSubmit={onSubmit} className="w-full">
       <div
         className={`flex items-center gap-3 border-b pb-3 ${
-          dark ? "border-white/30" : "border-black/25"
+          dark ? "border-white/30" : "border-[var(--color-ink)]/25"
         }`}
       >
         <label htmlFor={`newsletter-${source}`} className="sr-only">
@@ -59,7 +59,7 @@ export default function NewsletterForm({
           type="submit"
           disabled={status === "loading"}
           className={`shrink-0 text-[11px] uppercase tracking-luxe transition disabled:opacity-50 ${
-            dark ? "text-white hover:text-[var(--color-beige)]" : "hover:text-[var(--color-gold)]"
+            dark ? "text-white hover:text-[var(--color-sage)]" : "hover:text-[var(--color-green)]"
           }`}
         >
           {status === "loading" ? "…" : "Subscribe"}

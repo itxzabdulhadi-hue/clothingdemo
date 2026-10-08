@@ -51,7 +51,7 @@ export default function ContactPage() {
               href={whatsappLink(whatsappMessages.contact)}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between gap-4 border border-[var(--color-ink)] px-6 py-5 transition hover:bg-[var(--color-ink)] hover:text-[var(--color-ivory)]"
+              className="flex items-center justify-between gap-4 border border-[var(--color-ink)] px-6 py-5 transition hover:bg-[var(--color-green)] hover:text-[var(--color-paper)]"
             >
               <span>
                 <span className="block text-[11px] uppercase tracking-luxe">WhatsApp</span>

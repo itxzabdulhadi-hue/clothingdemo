@@ -32,7 +32,7 @@ export default function RecentlyViewed({
         {items.map((p) => (
           <li key={p.slug}>
             <Link href={`/products/${p.slug}`} className="group block">
-              <span className="relative block aspect-[3/4] overflow-hidden bg-[var(--color-bone)]">
+              <span className="relative block aspect-[3/4] overflow-hidden bg-[var(--color-mist)]">
                 <Image
                   src={p.image}
                   alt={p.alt}

@@ -113,7 +113,7 @@ export default function CheckoutView() {
         <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
           <Link
             href="/shop"
-            className="bg-[var(--color-ink)] px-9 py-4 text-[11px] uppercase tracking-luxe text-[var(--color-ivory)]"
+            className="bg-[var(--color-green)] px-9 py-4 text-[11px] uppercase tracking-luxe text-[var(--color-paper)]"
           >
             Continue shopping
           </Link>
@@ -136,7 +136,7 @@ export default function CheckoutView() {
         <p className="font-display text-3xl">There is nothing to check out.</p>
         <Link
           href="/shop"
-          className="mt-8 inline-block bg-[var(--color-ink)] px-10 py-4 text-[11px] uppercase tracking-luxe text-[var(--color-ivory)]"
+          className="mt-8 inline-block bg-[var(--color-green)] px-10 py-4 text-[11px] uppercase tracking-luxe text-[var(--color-paper)]"
         >
           Shop collection
         </Link>
@@ -181,7 +181,7 @@ export default function CheckoutView() {
               <label
                 key={opt.id}
                 className={`flex cursor-pointer items-center justify-between gap-4 border px-5 py-4 text-[13.5px] transition ${
-                  shippingMethod === opt.id ? "border-[var(--color-ink)]" : "border-black/15"
+                  shippingMethod === opt.id ? "border-[var(--color-green)]" : "border-[var(--color-ink)]/15"
                 }`}
               >
                 <span className="flex items-center gap-3">
@@ -191,7 +191,7 @@ export default function CheckoutView() {
                     value={opt.id}
                     checked={shippingMethod === opt.id}
                     onChange={() => setShippingMethod(opt.id)}
-                    className="accent-[var(--color-ink)]"
+                    className="accent-[var(--color-green)]"
                   />
                   {opt.label}
                 </span>
@@ -212,7 +212,7 @@ export default function CheckoutView() {
               <label
                 key={opt.id}
                 className={`flex cursor-pointer flex-col gap-1 border px-5 py-4 text-[13.5px] transition ${
-                  paymentMethod === opt.id ? "border-[var(--color-ink)]" : "border-black/15"
+                  paymentMethod === opt.id ? "border-[var(--color-green)]" : "border-[var(--color-ink)]/15"
                 }`}
               >
                 <span className="flex items-center gap-3">
@@ -222,7 +222,7 @@ export default function CheckoutView() {
                     value={opt.id}
                     checked={paymentMethod === opt.id}
                     onChange={() => setPaymentMethod(opt.id)}
-                    className="accent-[var(--color-ink)]"
+                    className="accent-[var(--color-green)]"
                   />
                   {opt.label}
                 </span>
@@ -240,10 +240,10 @@ export default function CheckoutView() {
 
       <aside className="lg:sticky lg:top-28 lg:self-start">
         <h2 className="eyebrow mb-6">Order summary</h2>
-        <ul className="space-y-4 border-y border-black/10 py-6">
+        <ul className="space-y-4 border-y border-[var(--color-ink)]/10 py-6">
           {items.map((item) => (
             <li key={item.key} className="flex gap-4">
-              <span className="relative h-20 w-16 shrink-0 bg-[var(--color-bone)]">
+              <span className="relative h-20 w-16 shrink-0 bg-[var(--color-mist)]">
                 <Image src={item.image} alt={item.name} fill sizes="64px" className="object-cover" />
               </span>
               <span className="flex-1 text-[13px]">
@@ -257,7 +257,7 @@ export default function CheckoutView() {
           ))}
         </ul>
 
-        <div className="border-b border-black/10 py-5">
+        <div className="border-b border-[var(--color-ink)]/10 py-5">
           <label htmlFor="coupon" className="eyebrow">
             Discount code
           </label>
@@ -267,12 +267,12 @@ export default function CheckoutView() {
               value={couponInput}
               onChange={(e) => setCouponInput(e.target.value)}
               placeholder="MAISON10"
-              className="w-full border border-black/15 px-3 py-3 text-[13px] outline-none focus:border-[var(--color-ink)]"
+              className="w-full border border-[var(--color-ink)]/15 px-3 py-3 text-[13px] outline-none focus:border-[var(--color-green)]"
             />
             <button
               type="button"
               onClick={applyCoupon}
-              className="shrink-0 border border-[var(--color-ink)] px-5 text-[11px] uppercase tracking-luxe transition hover:bg-[var(--color-ink)] hover:text-[var(--color-ivory)]"
+              className="shrink-0 border border-[var(--color-ink)] px-5 text-[11px] uppercase tracking-luxe transition hover:bg-[var(--color-green)] hover:text-[var(--color-paper)]"
             >
               Apply
             </button>
@@ -297,7 +297,7 @@ export default function CheckoutView() {
             <dt className="text-[var(--color-muted)]">Shipping</dt>
             <dd>{shipping === 0 ? "Complimentary" : formatPrice(shipping)}</dd>
           </div>
-          <div className="flex justify-between border-t border-black/10 pt-3 text-[16px]">
+          <div className="flex justify-between border-t border-[var(--color-ink)]/10 pt-3 text-[16px]">
             <dt>Total</dt>
             <dd>{formatPrice(total)}</dd>
           </div>
@@ -306,7 +306,7 @@ export default function CheckoutView() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="w-full bg-[var(--color-ink)] py-4 text-[11px] uppercase tracking-luxe text-[var(--color-ivory)] transition hover:bg-[var(--color-charcoal)] disabled:opacity-60"
+          className="w-full bg-[var(--color-green)] py-4 text-[11px] uppercase tracking-luxe text-[var(--color-paper)] transition hover:bg-[var(--color-forest)] disabled:opacity-60"
         >
           {status === "loading" ? "Placing order…" : "Place order"}
         </button>
@@ -351,7 +351,7 @@ function Field({
         type={type}
         required={required}
         autoComplete={autoComplete}
-        className="mt-2 w-full border-b border-black/20 bg-transparent py-3 text-[14px] outline-none transition focus:border-[var(--color-ink)]"
+        className="mt-2 w-full border-b border-[var(--color-ink)]/20 bg-transparent py-3 text-[14px] outline-none transition focus:border-[var(--color-green)]"
       />
     </div>
   );

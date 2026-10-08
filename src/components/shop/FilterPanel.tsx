@@ -102,7 +102,7 @@ export default function FilterPanel({
                     activeCategory === c.slug
                       ? "text-[var(--color-ink)] underline underline-offset-4"
                       : "text-[var(--color-muted)] hover:text-[var(--color-ink)]"
-                  } max-md:border max-md:border-black/15 max-md:px-3 max-md:py-1.5 max-md:no-underline`}
+                  } max-md:border max-md:border-[var(--color-ink)]/15 max-md:px-3 max-md:py-1.5 max-md:no-underline`}
                 >
                   {c.name}
                 </button>
@@ -123,8 +123,8 @@ export default function FilterPanel({
               aria-pressed={selectedSizes.includes(s)}
               className={`min-w-11 border px-3 py-2 text-[12px] transition ${
                 selectedSizes.includes(s)
-                  ? "border-[var(--color-ink)] bg-[var(--color-ink)] text-[var(--color-ivory)]"
-                  : "border-black/15 hover:border-[var(--color-ink)]"
+                  ? "border-[var(--color-green)] bg-[var(--color-green)] text-[var(--color-paper)]"
+                  : "border-[var(--color-ink)]/15 hover:border-[var(--color-green)]"
               }`}
             >
               {s}
@@ -147,8 +147,8 @@ export default function FilterPanel({
                 <span
                   className={`h-3.5 w-3.5 rounded-full border ${
                     selectedColors.includes(c.name)
-                      ? "border-[var(--color-ink)] ring-1 ring-[var(--color-ink)] ring-offset-2"
-                      : "border-black/20"
+                      ? "border-[var(--color-green)] ring-1 ring-[var(--color-green)] ring-offset-2"
+                      : "border-[var(--color-ink)]/20"
                   }`}
                   style={{ backgroundColor: c.hex }}
                 />
@@ -169,7 +169,7 @@ export default function FilterPanel({
           value={maxPrice}
           onChange={(e) => setSingle("maxPrice", e.target.value)}
           aria-label="Maximum price"
-          className="w-full accent-[var(--color-ink)]"
+          className="w-full accent-[var(--color-green)]"
         />
       </fieldset>
 
@@ -193,8 +193,8 @@ export default function FilterPanel({
   return (
     <>
       {/* Toolbar */}
-      <div className="mb-2 flex w-full flex-wrap items-center gap-3 border-y border-black/10 py-4 lg:col-span-2">
-        <div className="flex flex-1 items-center gap-2 border border-black/15 px-3 py-2">
+      <div className="mb-2 flex w-full flex-wrap items-center gap-3 border-y border-[var(--color-ink)]/10 py-4 lg:col-span-2">
+        <div className="flex flex-1 items-center gap-2 border border-[var(--color-ink)]/15 px-3 py-2">
           <IconSearch className="h-4 w-4 text-[var(--color-muted)]" />
           <label htmlFor="shop-search" className="sr-only">
             Search within collection
@@ -210,7 +210,7 @@ export default function FilterPanel({
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="border border-black/15 px-4 py-2.5 text-[11px] uppercase tracking-luxe lg:hidden"
+          className="border border-[var(--color-ink)]/15 px-4 py-2.5 text-[11px] uppercase tracking-luxe lg:hidden"
         >
           Filters{activeCount > 0 ? ` (${activeCount})` : ""}
         </button>
@@ -222,7 +222,7 @@ export default function FilterPanel({
             id="sort"
             value={sort}
             onChange={(e) => setSingle("sort", e.target.value)}
-            className="border border-black/15 bg-transparent px-3 py-2.5 text-[12px] outline-none"
+            className="border border-[var(--color-ink)]/15 bg-transparent px-3 py-2.5 text-[12px] outline-none"
           >
             {sorts.map((s) => (
               <option key={s.value} value={s.value}>
@@ -242,8 +242,8 @@ export default function FilterPanel({
       {/* Mobile drawer */}
       {open && (
         <div className="fixed inset-0 z-[94] lg:hidden" role="dialog" aria-modal="true" aria-label="Filters">
-          <div className="absolute inset-0 bg-black/40" onClick={() => setOpen(false)} />
-          <div className="absolute inset-y-0 left-0 w-[88%] max-w-sm overflow-y-auto bg-[var(--color-ivory)] p-6">
+          <div className="absolute inset-0 bg-[var(--color-ink)]/40" onClick={() => setOpen(false)} />
+          <div className="absolute inset-y-0 left-0 w-[88%] max-w-sm overflow-y-auto bg-[var(--color-paper)] p-6">
             <div className="mb-8 flex items-center justify-between">
               <p className="eyebrow">Filters</p>
               <button type="button" onClick={() => setOpen(false)} aria-label="Close filters">
@@ -254,7 +254,7 @@ export default function FilterPanel({
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="mt-10 w-full bg-[var(--color-ink)] py-4 text-[11px] uppercase tracking-luxe text-[var(--color-ivory)]"
+              className="mt-10 w-full bg-[var(--color-green)] py-4 text-[11px] uppercase tracking-luxe text-[var(--color-paper)]"
             >
               Show {total} pieces
             </button>

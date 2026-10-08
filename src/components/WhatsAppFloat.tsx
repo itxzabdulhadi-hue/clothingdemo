@@ -32,7 +32,7 @@ export default function WhatsAppFloat() {
       aria-label="Chat with us on WhatsApp"
       className={`group fixed ${
         pathname.startsWith("/products/") ? "bottom-24" : "bottom-5"
-      } right-5 z-[60] flex items-center gap-0 overflow-hidden rounded-full bg-[var(--color-ink)] text-[var(--color-ivory)] shadow-[0_18px_40px_-18px_rgba(0,0,0,.65)] transition-all duration-500 hover:bg-[#1f7a4d] md:bottom-8 md:right-8`}
+      } right-5 z-[60] flex items-center gap-0 overflow-hidden rounded-full bg-[var(--color-green)] text-[var(--color-paper)] shadow-[0_18px_40px_-18px_rgba(0,0,0,.65)] transition-all duration-500 hover:bg-[var(--color-forest)] md:bottom-8 md:right-8`}
     >
       <span className="grid h-12 w-12 shrink-0 place-items-center md:h-12 md:w-12">
         <IconWhatsApp className="h-5 w-5" />

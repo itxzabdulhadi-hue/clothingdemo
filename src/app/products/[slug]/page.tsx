@@ -120,9 +120,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
             <div className="mt-12">
               <h2 className="sr-only">Product information</h2>
-              <div className="border-t border-black/10">
+              <div className="border-t border-[var(--color-ink)]/10">
                 {info.map((row) => (
-                  <details key={row.title} className="group border-b border-black/10">
+                  <details key={row.title} className="group border-b border-[var(--color-ink)]/10">
                     <summary className="flex cursor-pointer list-none items-center justify-between py-4 text-[11px] uppercase tracking-luxe">
                       {row.title}
                       <span className="text-base transition-transform duration-300 group-open:rotate-45" aria-hidden="true">

@@ -48,7 +48,7 @@ export default function ContactForm() {
             type={f.type}
             required={f.required}
             autoComplete={f.autoComplete}
-            className="mt-2 w-full border-b border-black/20 bg-transparent py-3 text-[14px] outline-none transition focus:border-[var(--color-ink)]"
+            className="mt-2 w-full border-b border-[var(--color-ink)]/20 bg-transparent py-3 text-[14px] outline-none transition focus:border-[var(--color-green)]"
           />
         </div>
       ))}
@@ -61,14 +61,14 @@ export default function ContactForm() {
           name="message"
           required
           rows={5}
-          className="mt-2 w-full resize-none border-b border-black/20 bg-transparent py-3 text-[14px] outline-none transition focus:border-[var(--color-ink)]"
+          className="mt-2 w-full resize-none border-b border-[var(--color-ink)]/20 bg-transparent py-3 text-[14px] outline-none transition focus:border-[var(--color-green)]"
         />
       </div>
       <div className="sm:col-span-2">
         <button
           type="submit"
           disabled={status === "loading"}
-          className="w-full bg-[var(--color-ink)] px-10 py-4 text-[11px] uppercase tracking-luxe text-[var(--color-ivory)] transition hover:bg-[var(--color-charcoal)] disabled:opacity-60 sm:w-auto"
+          className="w-full bg-[var(--color-green)] px-10 py-4 text-[11px] uppercase tracking-luxe text-[var(--color-paper)] transition hover:bg-[var(--color-forest)] disabled:opacity-60 sm:w-auto"
         >
           {status === "loading" ? "Sending…" : "Send message"}
         </button>

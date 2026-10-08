@@ -49,7 +49,7 @@ export default function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-[70] transition-[background-color,color,border-color,backdrop-filter] duration-500 ${
         solid
-          ? "border-b border-black/10 bg-[var(--color-ivory)]/92 text-[var(--color-ink)] backdrop-blur-md"
+          ? "border-b border-[var(--color-ink)]/10 bg-[var(--color-paper)]/92 text-[var(--color-ink)] backdrop-blur-md"
           : "border-b border-white/15 bg-transparent text-white"
       }`}
     >
@@ -72,7 +72,7 @@ export default function Header() {
                     {item.label}
                   </Link>
                   {item.label === "Collections" && (
-                    <div className="invisible absolute left-1/2 top-full w-56 -translate-x-1/2 border border-black/10 bg-[var(--color-ivory)] p-5 text-[var(--color-ink)] opacity-0 shadow-[0_24px_60px_-30px_rgba(0,0,0,.4)] transition-all duration-300 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                    <div className="invisible absolute left-1/2 top-full w-56 -translate-x-1/2 border border-[var(--color-ink)]/10 bg-[var(--color-paper)] p-5 text-[var(--color-ink)] opacity-0 shadow-[0_24px_60px_-30px_rgba(0,0,0,.4)] transition-all duration-300 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                       <ul className="space-y-3">
                         {collectionLinks.map((c) => (
                           <li key={c.href}>
@@ -113,7 +113,7 @@ export default function Header() {
           >
             <IconBag className="h-[18px] w-[18px]" />
             {count > 0 && (
-              <span className="absolute -right-2 -top-1.5 grid h-4 min-w-4 place-items-center rounded-full bg-[var(--color-gold)] px-1 text-[9px] font-medium text-white">
+              <span className="absolute -right-2 -top-1.5 grid h-4 min-w-4 place-items-center rounded-full bg-[var(--color-green)] px-1 text-[9px] font-medium text-white">
                 {count}
               </span>
             )}
@@ -123,7 +123,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       <div
-        className={`overflow-hidden border-t border-black/10 bg-[var(--color-ivory)] text-[var(--color-ink)] transition-[max-height] duration-500 lg:hidden ${
+        className={`overflow-hidden border-t border-[var(--color-ink)]/10 bg-[var(--color-paper)] text-[var(--color-ink)] transition-[max-height] duration-500 lg:hidden ${
           menuOpen ? "max-h-[75vh]" : "max-h-0"
         }`}
       >

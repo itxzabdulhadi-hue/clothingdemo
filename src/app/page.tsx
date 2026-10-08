@@ -47,8 +47,8 @@ export default async function HomePage() {
           sizes="100vw"
           className="object-cover object-center opacity-85"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/15 to-black/65" />
-        <div className="relative mx-auto flex h-full max-w-[1500px] flex-col justify-end px-5 pb-16 text-[var(--color-ivory)] md:px-10 md:pb-24">
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-ink)]/45 via-[var(--color-ink)]/15 to-[var(--color-ink)]/65" />
+        <div className="relative mx-auto flex h-full max-w-[1500px] flex-col justify-end px-5 pb-16 text-[var(--color-paper)] md:px-10 md:pb-24">
           <p className="animate-fade-up eyebrow text-white/70">Autumn — Winter Collection</p>
           <h1 className="animate-fade-up mt-5 max-w-3xl font-display text-[3.25rem] leading-[0.95] md:text-[6.5rem]">
             {site.tagline}
@@ -62,7 +62,7 @@ export default async function HomePage() {
           <div className="animate-fade-up mt-9 flex flex-wrap gap-3" style={{ animationDelay: "260ms" }}>
             <Link
               href="/shop"
-              className="bg-[var(--color-ivory)] px-9 py-4 text-[11px] uppercase tracking-luxe text-[var(--color-ink)] transition hover:bg-[var(--color-beige)]"
+              className="bg-[var(--color-paper)] px-9 py-4 text-[11px] uppercase tracking-luxe text-[var(--color-ink)] transition hover:bg-[var(--color-sage)]"
             >
               Shop collection
             </Link>
@@ -91,7 +91,7 @@ export default async function HomePage() {
       </section>
 
       {/* BRAND STATEMENT */}
-      <section aria-labelledby="statement-heading" className="relative isolate overflow-hidden bg-[var(--color-ink)] text-[var(--color-ivory)]">
+      <section aria-labelledby="statement-heading" className="relative isolate overflow-hidden bg-[var(--color-ink)] text-[var(--color-paper)]">
         <Image
           src={editorialImages.statement}
           alt="Three models in refined black tailoring"
@@ -133,7 +133,7 @@ export default async function HomePage() {
       </section>
 
       {/* LOOKBOOK */}
-      <section aria-labelledby="lookbook-heading" className="bg-[var(--color-bone)]/60">
+      <section aria-labelledby="lookbook-heading" className="bg-[var(--color-mist)]/60">
         <div className="mx-auto grid max-w-[1500px] gap-6 px-5 py-20 md:grid-cols-12 md:px-10 md:py-28">
           <Reveal className="md:col-span-7">
             <div className="relative aspect-[4/5] w-full overflow-hidden md:aspect-[4/3]">
@@ -161,7 +161,7 @@ export default async function HomePage() {
               </p>
               <Link
                 href="/collections/new-arrivals"
-                className="group mt-9 inline-flex w-fit items-center gap-3 border border-[var(--color-ink)] px-8 py-4 text-[11px] uppercase tracking-luxe transition hover:bg-[var(--color-ink)] hover:text-[var(--color-ivory)]"
+                className="group mt-9 inline-flex w-fit items-center gap-3 border border-[var(--color-ink)] px-8 py-4 text-[11px] uppercase tracking-luxe transition hover:bg-[var(--color-green)] hover:text-[var(--color-paper)]"
               >
                 View the lookbook
                 <IconArrow className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />

@@ -89,8 +89,8 @@ export default function SearchOverlay() {
 
   return (
     <div className="fixed inset-0 z-[96] animate-fade-in" role="dialog" aria-modal="true" aria-label="Search">
-      <div className="absolute inset-0 bg-black/45" onClick={() => setSearchOpen(false)} />
-      <div className="relative mx-auto max-h-[88vh] w-full overflow-y-auto bg-[var(--color-ivory)] px-5 pb-10 pt-6 md:px-10">
+      <div className="absolute inset-0 bg-[var(--color-ink)]/45" onClick={() => setSearchOpen(false)} />
+      <div className="relative mx-auto max-h-[88vh] w-full overflow-y-auto bg-[var(--color-paper)] px-5 pb-10 pt-6 md:px-10">
         <div className="mx-auto max-w-3xl">
           <div className="flex items-center justify-between">
             <p className="eyebrow">Search</p>
@@ -99,7 +99,7 @@ export default function SearchOverlay() {
             </button>
           </div>
           <form
-            className="mt-4 flex items-center gap-3 border-b border-black/20 pb-3"
+            className="mt-4 flex items-center gap-3 border-b border-[var(--color-ink)]/20 pb-3"
             onSubmit={(e) => {
               e.preventDefault();
               if (q.trim()) commit(q.trim());
@@ -164,7 +164,7 @@ export default function SearchOverlay() {
               </p>
             </div>
           ) : (
-            <ul className="mt-8 divide-y divide-black/10">
+            <ul className="mt-8 divide-y divide-[var(--color-ink)]/10">
               {results.map((r) => (
                 <li key={r.slug}>
                   <Link
@@ -175,7 +175,7 @@ export default function SearchOverlay() {
                     }}
                     className="flex items-center gap-4 py-3 transition hover:opacity-70"
                   >
-                    <span className="relative h-20 w-16 shrink-0 bg-[var(--color-bone)]">
+                    <span className="relative h-20 w-16 shrink-0 bg-[var(--color-mist)]">
                       <Image src={r.image} alt={r.name} fill sizes="64px" className="object-cover" />
                     </span>
                     <span className="min-w-0 flex-1">

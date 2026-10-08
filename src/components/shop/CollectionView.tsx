@@ -122,7 +122,7 @@ export default async function CollectionView({
                 {current > 1 && (
                   <Link
                     href={pageHref(current - 1)}
-                    className="border border-black/15 px-4 py-2.5 text-[11px] uppercase tracking-luxe hover:border-[var(--color-ink)]"
+                    className="border border-[var(--color-ink)]/15 px-4 py-2.5 text-[11px] uppercase tracking-luxe hover:border-[var(--color-green)]"
                   >
                     Previous
                   </Link>
@@ -134,8 +134,8 @@ export default async function CollectionView({
                     aria-current={n === current ? "page" : undefined}
                     className={`border px-4 py-2.5 text-[11px] tracking-luxe ${
                       n === current
-                        ? "border-[var(--color-ink)] bg-[var(--color-ink)] text-[var(--color-ivory)]"
-                        : "border-black/15 hover:border-[var(--color-ink)]"
+                        ? "border-[var(--color-green)] bg-[var(--color-green)] text-[var(--color-paper)]"
+                        : "border-[var(--color-ink)]/15 hover:border-[var(--color-green)]"
                     }`}
                   >
                     {n}
@@ -144,7 +144,7 @@ export default async function CollectionView({
                 {current < totalPages && (
                   <Link
                     href={pageHref(current + 1)}
-                    className="border border-black/15 px-4 py-2.5 text-[11px] uppercase tracking-luxe hover:border-[var(--color-ink)]"
+                    className="border border-[var(--color-ink)]/15 px-4 py-2.5 text-[11px] uppercase tracking-luxe hover:border-[var(--color-green)]"
                   >
                     Next
                   </Link>

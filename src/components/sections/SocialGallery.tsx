@@ -22,7 +22,7 @@ export default function SocialGallery() {
               href={site.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative block aspect-square overflow-hidden bg-[var(--color-bone)]"
+              className="group relative block aspect-square overflow-hidden bg-[var(--color-mist)]"
               aria-label="View our Instagram profile"
             >
               <Image

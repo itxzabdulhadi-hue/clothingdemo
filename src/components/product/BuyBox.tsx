@@ -51,7 +51,7 @@ export default function BuyBox({ product }: { product: Product }) {
           {formatPrice(product.price)}
         </p>
         {onSale && (
-          <span className="bg-[var(--color-ink)] px-2 py-1 text-[10px] uppercase tracking-luxe text-[var(--color-ivory)]">
+          <span className="bg-[var(--color-green)] px-2 py-1 text-[10px] uppercase tracking-luxe text-[var(--color-paper)]">
             Archive price
           </span>
         )}
@@ -72,8 +72,8 @@ export default function BuyBox({ product }: { product: Product }) {
               aria-pressed={color === c.name}
               className={`h-7 w-7 rounded-full border transition ${
                 color === c.name
-                  ? "border-[var(--color-ink)] ring-1 ring-[var(--color-ink)] ring-offset-2"
-                  : "border-black/15 hover:border-black/40"
+                  ? "border-[var(--color-green)] ring-1 ring-[var(--color-green)] ring-offset-2"
+                  : "border-[var(--color-ink)]/15 hover:border-[var(--color-ink)]/40"
               }`}
               style={{ backgroundColor: c.hex }}
             />
@@ -101,8 +101,8 @@ export default function BuyBox({ product }: { product: Product }) {
               aria-pressed={size === s}
               className={`min-w-14 border px-4 py-3 text-[12px] tracking-wide transition ${
                 size === s
-                  ? "border-[var(--color-ink)] bg-[var(--color-ink)] text-[var(--color-ivory)]"
-                  : "border-black/15 hover:border-[var(--color-ink)]"
+                  ? "border-[var(--color-green)] bg-[var(--color-green)] text-[var(--color-paper)]"
+                  : "border-[var(--color-ink)]/15 hover:border-[var(--color-green)]"
               }`}
             >
               {s}
@@ -113,7 +113,7 @@ export default function BuyBox({ product }: { product: Product }) {
 
       <div className="mt-8 flex items-center gap-4">
         <span className="eyebrow">Quantity</span>
-        <div className="flex items-center border border-black/15">
+        <div className="flex items-center border border-[var(--color-ink)]/15">
           <button type="button" aria-label="Decrease quantity" className="px-4 py-2.5" onClick={() => setQty((q) => Math.max(1, q - 1))}>
             −
           </button>
@@ -129,7 +129,7 @@ export default function BuyBox({ product }: { product: Product }) {
           <button
             type="button"
             onClick={() => addItem(payload)}
-            className="flex-1 bg-[var(--color-ink)] py-4 text-[11px] uppercase tracking-luxe text-[var(--color-ivory)] transition hover:bg-[var(--color-charcoal)]"
+            className="flex-1 bg-[var(--color-green)] py-4 text-[11px] uppercase tracking-luxe text-[var(--color-paper)] transition hover:bg-[var(--color-forest)]"
           >
             Add to cart
           </button>
@@ -138,7 +138,7 @@ export default function BuyBox({ product }: { product: Product }) {
             onClick={() => toggleWishlist(product.slug)}
             aria-pressed={wished}
             aria-label={wished ? "Remove from wishlist" : "Add to wishlist"}
-            className="grid w-14 place-items-center border border-black/20 transition hover:border-[var(--color-ink)]"
+            className="grid w-14 place-items-center border border-[var(--color-ink)]/20 transition hover:border-[var(--color-green)]"
           >
             <IconHeart filled={wished} className="h-5 w-5" />
           </button>
@@ -149,7 +149,7 @@ export default function BuyBox({ product }: { product: Product }) {
             addItem(payload, { open: false });
             router.push("/checkout");
           }}
-          className="border border-[var(--color-ink)] py-4 text-[11px] uppercase tracking-luxe transition hover:bg-[var(--color-ink)] hover:text-[var(--color-ivory)]"
+          className="border border-[var(--color-ink)] py-4 text-[11px] uppercase tracking-luxe transition hover:bg-[var(--color-green)] hover:text-[var(--color-paper)]"
         >
           Buy now
         </button>
@@ -157,7 +157,7 @@ export default function BuyBox({ product }: { product: Product }) {
           href={whatsappLink(whatsappMessages.productVariant(product.name, size, color))}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-3 border border-[#1f7a4d] py-4 text-[11px] uppercase tracking-luxe text-[#1f7a4d] transition hover:bg-[#1f7a4d] hover:text-white"
+          className="inline-flex items-center justify-center gap-3 border border-[var(--color-green)] py-4 text-[11px] uppercase tracking-luxe text-[var(--color-green)] transition hover:bg-[var(--color-green)] hover:text-white"
         >
           <IconWhatsApp className="h-4 w-4" />
           Ask about this product on WhatsApp
@@ -165,7 +165,7 @@ export default function BuyBox({ product }: { product: Product }) {
       </div>
 
       {/* Sticky mobile add to cart */}
-      <div className="fixed inset-x-0 bottom-0 z-[55] flex items-center gap-3 border-t border-black/10 bg-[var(--color-ivory)]/95 px-4 py-3 backdrop-blur md:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-[55] flex items-center gap-3 border-t border-[var(--color-ink)]/10 bg-[var(--color-paper)]/95 px-4 py-3 backdrop-blur md:hidden">
         <div className="min-w-0 flex-1">
           <p className="truncate text-[12px]">{product.name}</p>
           <p className="text-[12px] text-[var(--color-muted)]">
@@ -175,7 +175,7 @@ export default function BuyBox({ product }: { product: Product }) {
         <button
           type="button"
           onClick={() => addItem(payload)}
-          className="shrink-0 bg-[var(--color-ink)] px-6 py-3.5 text-[11px] uppercase tracking-luxe text-[var(--color-ivory)]"
+          className="shrink-0 bg-[var(--color-green)] px-6 py-3.5 text-[11px] uppercase tracking-luxe text-[var(--color-paper)]"
         >
           Add to cart
         </button>
@@ -183,8 +183,8 @@ export default function BuyBox({ product }: { product: Product }) {
 
       {guideOpen && (
         <div className="fixed inset-0 z-[97] grid place-items-center p-4" role="dialog" aria-modal="true" aria-label="Size guide">
-          <div className="absolute inset-0 bg-black/45" onClick={() => setGuideOpen(false)} />
-          <div className="relative z-10 w-full max-w-lg bg-[var(--color-ivory)] p-6 md:p-8">
+          <div className="absolute inset-0 bg-[var(--color-ink)]/45" onClick={() => setGuideOpen(false)} />
+          <div className="relative z-10 w-full max-w-lg bg-[var(--color-paper)] p-6 md:p-8">
             <div className="flex items-start justify-between">
               <h2 className="font-display text-2xl">Size guide</h2>
               <button type="button" onClick={() => setGuideOpen(false)} aria-label="Close size guide">
@@ -196,7 +196,7 @@ export default function BuyBox({ product }: { product: Product }) {
             </p>
             <table className="mt-6 w-full border-collapse text-[13px]">
               <thead>
-                <tr className="border-b border-black/15 text-left">
+                <tr className="border-b border-[var(--color-ink)]/15 text-left">
                   <th scope="col" className="py-2 font-normal">Size</th>
                   <th scope="col" className="py-2 font-normal">Chest</th>
                   <th scope="col" className="py-2 font-normal">Waist</th>
@@ -205,7 +205,7 @@ export default function BuyBox({ product }: { product: Product }) {
               </thead>
               <tbody>
                 {sizeGuide.map((row) => (
-                  <tr key={row.size} className="border-b border-black/8">
+                  <tr key={row.size} className="border-b border-[var(--color-ink)]/8">
                     <th scope="row" className="py-2.5 text-left font-normal">{row.size}</th>
                     <td className="py-2.5">{row.chest}</td>
                     <td className="py-2.5">{row.waist}</td>

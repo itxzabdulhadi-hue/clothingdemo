@@ -24,7 +24,7 @@ const infoLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--color-ink)] text-[var(--color-ivory)]">
+    <footer className="bg-[var(--color-ink)] text-[var(--color-paper)]">
       <div className="mx-auto max-w-[1500px] px-5 py-16 md:px-10 md:py-20">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
@@ -99,7 +99,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-white/15 pt-6 text-[11px] uppercase tracking-luxe text-white/45 md:flex-row md:items-center md:justify-between">
+        <div className="mt-14 flex flex-col gap-3 border-t border-white/15 pt-6 text-[11px] uppercase tracking-luxe text-white/55 md:flex-row md:items-center md:justify-between">
           <p>
             © {new Date().getFullYear()} {site.legalName}. All rights reserved.
           </p>

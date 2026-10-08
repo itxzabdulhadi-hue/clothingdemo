@@ -26,7 +26,7 @@ export default function ProductCard({
 
   return (
     <article className="group relative">
-      <div className="relative overflow-hidden bg-[var(--color-bone)]">
+      <div className="relative overflow-hidden bg-[var(--color-mist)]">
         <Link href={`/products/${product.slug}`} aria-label={`View ${product.name}`} className="block">
           <div className="relative aspect-[3/4] w-full">
             <Image
@@ -51,12 +51,12 @@ export default function ProductCard({
 
         <div className="pointer-events-none absolute left-3 top-3 flex flex-col gap-1">
           {product.isNew && (
-            <span className="bg-[var(--color-ink)]/90 px-2 py-1 text-[10px] uppercase tracking-luxe text-[var(--color-ivory)]">
+            <span className="bg-[var(--color-green)]/90 px-2 py-1 text-[10px] uppercase tracking-luxe text-[var(--color-paper)]">
               New
             </span>
           )}
           {onSale && (
-            <span className="bg-[var(--color-ivory)]/95 px-2 py-1 text-[10px] uppercase tracking-luxe text-[var(--color-ink)]">
+            <span className="bg-[var(--color-paper)]/95 px-2 py-1 text-[10px] uppercase tracking-luxe text-[var(--color-ink)]">
               Sale
             </span>
           )}
@@ -67,7 +67,7 @@ export default function ProductCard({
           onClick={() => toggleWishlist(product.slug)}
           aria-pressed={wished}
           aria-label={wished ? `Remove ${product.name} from wishlist` : `Add ${product.name} to wishlist`}
-          className="absolute right-3 top-3 grid h-9 w-9 place-items-center bg-[var(--color-ivory)]/80 text-[var(--color-ink)] backdrop-blur transition hover:bg-[var(--color-ivory)]"
+          className="absolute right-3 top-3 grid h-9 w-9 place-items-center bg-[var(--color-paper)]/80 text-[var(--color-ink)] backdrop-blur transition hover:bg-[var(--color-paper)]"
         >
           <IconHeart filled={wished} className="h-4 w-4" />
         </button>
@@ -76,7 +76,7 @@ export default function ProductCard({
           <button
             type="button"
             onClick={() => setQuickOpen(true)}
-            className="flex-1 bg-[var(--color-ivory)]/95 py-3 text-[11px] uppercase tracking-luxe transition hover:bg-[var(--color-ink)] hover:text-[var(--color-ivory)]"
+            className="flex-1 bg-[var(--color-paper)]/95 py-3 text-[11px] uppercase tracking-luxe transition hover:bg-[var(--color-green)] hover:text-[var(--color-paper)]"
           >
             Quick view
           </button>
@@ -95,7 +95,7 @@ export default function ProductCard({
               <span
                 key={c.name}
                 title={c.name}
-                className="h-2.5 w-2.5 rounded-full border border-black/15"
+                className="h-2.5 w-2.5 rounded-full border border-[var(--color-ink)]/15"
                 style={{ backgroundColor: c.hex }}
               >
                 <span className="sr-only">{c.name}</span>

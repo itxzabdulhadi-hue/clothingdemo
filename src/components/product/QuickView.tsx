@@ -28,10 +28,10 @@ export default function QuickView({ product, onClose }: { product: Product; onCl
       role="dialog"
       aria-modal="true"
       aria-label={`Quick view: ${product.name}`}
-      className="fixed inset-0 z-[90] flex items-end justify-center bg-black/45 p-0 animate-fade-in sm:items-center sm:p-6"
+      className="fixed inset-0 z-[90] flex items-end justify-center bg-[var(--color-ink)]/45 p-0 animate-fade-in sm:items-center sm:p-6"
     >
       <button type="button" aria-label="Close quick view" className="absolute inset-0 cursor-default" onClick={onClose} />
-      <div className="relative z-10 grid w-full max-w-3xl grid-cols-1 bg-[var(--color-ivory)] sm:grid-cols-2">
+      <div className="relative z-10 grid w-full max-w-3xl grid-cols-1 bg-[var(--color-paper)] sm:grid-cols-2">
         <div className="relative hidden aspect-[3/4] sm:block">
           <Image
             src={product.images[0].url}
@@ -69,7 +69,7 @@ export default function QuickView({ product, onClose }: { product: Product; onCl
                   aria-label={c.name}
                   aria-pressed={color === c.name}
                   className={`h-6 w-6 rounded-full border transition ${
-                    color === c.name ? "border-[var(--color-ink)] ring-1 ring-[var(--color-ink)] ring-offset-2" : "border-black/15"
+                    color === c.name ? "border-[var(--color-green)] ring-1 ring-[var(--color-green)] ring-offset-2" : "border-[var(--color-ink)]/15"
                   }`}
                   style={{ backgroundColor: c.hex }}
                 />
@@ -88,8 +88,8 @@ export default function QuickView({ product, onClose }: { product: Product; onCl
                   aria-pressed={size === s}
                   className={`min-w-11 border px-3 py-2 text-[12px] tracking-wide transition ${
                     size === s
-                      ? "border-[var(--color-ink)] bg-[var(--color-ink)] text-[var(--color-ivory)]"
-                      : "border-black/15 hover:border-[var(--color-ink)]"
+                      ? "border-[var(--color-green)] bg-[var(--color-green)] text-[var(--color-paper)]"
+                      : "border-[var(--color-ink)]/15 hover:border-[var(--color-green)]"
                   }`}
                 >
                   {s}
@@ -112,7 +112,7 @@ export default function QuickView({ product, onClose }: { product: Product; onCl
               });
               onClose();
             }}
-            className="mt-7 w-full bg-[var(--color-ink)] py-4 text-[11px] uppercase tracking-luxe text-[var(--color-ivory)] transition hover:bg-[var(--color-charcoal)]"
+            className="mt-7 w-full bg-[var(--color-green)] py-4 text-[11px] uppercase tracking-luxe text-[var(--color-paper)] transition hover:bg-[var(--color-forest)]"
           >
             Add to cart
           </button>

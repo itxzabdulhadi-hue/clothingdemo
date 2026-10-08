@@ -11,7 +11,7 @@ export default function NotFound() {
       <div className="mt-9 flex flex-wrap justify-center gap-3">
         <Link
           href="/shop"
-          className="bg-[var(--color-ink)] px-9 py-4 text-[11px] uppercase tracking-luxe text-[var(--color-ivory)]"
+          className="bg-[var(--color-green)] px-9 py-4 text-[11px] uppercase tracking-luxe text-[var(--color-paper)]"
         >
           Shop collection
         </Link>

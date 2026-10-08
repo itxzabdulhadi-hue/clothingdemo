@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #0b0b0b;
-  --color-charcoal: #2a2a2a;
-  --color-ivory: #f7f4ef;
-  --color-bone: #efeae1;
-  --color-beige: #d9cbb7;
-  --color-sand: #c3b096;
-  --color-gold: #a98b5d;
-  --color-muted: #6f6a63;
+  /* White and green palette. Use these tokens rather than hard-coded colours. */
+  --color-paper: #ffffff; /* page background */
+  --color-mist: #eaf4ed; /* tinted surfaces and image placeholders */
+  --color-sage: #cfe7d8; /* light green: hover on white buttons over dark sections */
+  --color-ink: #0e2a1f; /* text, and dark sections such as the hero and footer */
+  --color-forest: #15603e; /* hover state for green buttons */
+  --color-green: #1f7a4d; /* accent: primary buttons, badges, eyebrows */
+  --color-focus: #3f9a6a; /* focus rings: 3:1 or better on white, mist and deep green */
+  --color-muted: #5d6c63; /* secondary text */
   --font-serif: var(--font-display), "Times New Roman", serif;
   --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
 }
@@ -23,15 +24,15 @@ html {
 }
 
 body {
-  background-color: var(--color-ivory);
+  background-color: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans);
   font-feature-settings: "kern", "liga";
 }
 
 ::selection {
-  background: var(--color-ink);
-  color: var(--color-ivory);
+  background: var(--color-green);
+  color: var(--color-paper);
 }
 
 h1, h2, h3, h4, .font-display {
@@ -48,7 +49,14 @@ h1, h2, h3, h4, .font-display {
   font-size: 0.6875rem;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--color-muted);
+}
+
+/* Colour is layered so text colour utilities (e.g. text-white/50 on dark sections) can override it.
+   The other properties stay unlayered so they still beat the heading rule above. */
+@layer components {
+  .eyebrow {
+    color: var(--color-green);
+  }
 }
 
 /* Focus states */
@@ -58,7 +66,7 @@ input:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
 [tabindex]:focus-visible {
-  outline: 1px solid var(--color-ink);
+  outline: 1px solid var(--color-focus);
   outline-offset: 3px;
 }
 

@@ -59,8 +59,8 @@ export default function AboutPage() {
           sizes="100vw"
           className="object-cover opacity-80"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" />
-        <div className="relative mx-auto flex h-full max-w-[1500px] flex-col justify-end px-5 pb-16 text-[var(--color-ivory)] md:px-10 md:pb-24">
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-ink)]/40 to-[var(--color-ink)]/60" />
+        <div className="relative mx-auto flex h-full max-w-[1500px] flex-col justify-end px-5 pb-16 text-[var(--color-paper)] md:px-10 md:pb-24">
           <p className="animate-fade-up eyebrow text-white/70">The house</p>
           <h1 className="animate-fade-up mt-5 max-w-3xl font-display text-[3rem] leading-[0.98] md:text-[5.5rem]">
             A quieter kind of luxury.
@@ -85,7 +85,7 @@ export default function AboutPage() {
         </Reveal>
       </section>
 
-      <section aria-labelledby="craft-heading" className="bg-[var(--color-bone)]/60">
+      <section aria-labelledby="craft-heading" className="bg-[var(--color-mist)]/60">
         <div className="mx-auto grid max-w-[1500px] items-center gap-10 px-5 py-20 md:grid-cols-2 md:px-10 md:py-28">
           <Reveal>
             <div className="relative aspect-[4/5] w-full overflow-hidden">
@@ -123,7 +123,7 @@ export default function AboutPage() {
         <div className="mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {pillars.map((p, i) => (
             <Reveal key={p.title} delay={i * 80}>
-              <p className="font-display text-3xl text-[var(--color-gold)]">0{i + 1}</p>
+              <p className="font-display text-3xl text-[var(--color-green)]">0{i + 1}</p>
               <h3 className="mt-4 font-sans text-[11px] uppercase tracking-luxe">{p.title}</h3>
               <p className="mt-3 text-[13.5px] leading-relaxed text-[var(--color-muted)]">{p.body}</p>
             </Reveal>
@@ -131,7 +131,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative isolate overflow-hidden bg-[var(--color-ink)] text-[var(--color-ivory)]">
+      <section className="relative isolate overflow-hidden bg-[var(--color-ink)] text-[var(--color-paper)]">
         <Image
           src={editorialImages.studio}
           alt="Studio photography session for the Maison Noir collection"
@@ -148,7 +148,7 @@ export default function AboutPage() {
             </h2>
             <Link
               href="/shop"
-              className="group mt-10 inline-flex items-center gap-3 bg-[var(--color-ivory)] px-9 py-4 text-[11px] uppercase tracking-luxe text-[var(--color-ink)] transition hover:bg-[var(--color-beige)]"
+              className="group mt-10 inline-flex items-center gap-3 bg-[var(--color-paper)] px-9 py-4 text-[11px] uppercase tracking-luxe text-[var(--color-ink)] transition hover:bg-[var(--color-sage)]"
             >
               Shop the collection
               <IconArrow className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />

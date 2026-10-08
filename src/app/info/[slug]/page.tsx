@@ -77,20 +77,20 @@ export default async function InfoPageRoute({ params }: { params: Promise<{ slug
           ))}
         </div>
 
-        <div className="mt-16 border-t border-black/10 pt-8">
+        <div className="mt-16 border-t border-[var(--color-ink)]/10 pt-8">
           <p className="text-[14px]">Still need help?</p>
           <div className="mt-4 flex flex-wrap gap-3">
             <a
               href={whatsappLink(whatsappMessages.contact)}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-[var(--color-ink)] px-7 py-3.5 text-[11px] uppercase tracking-luxe transition hover:bg-[var(--color-ink)] hover:text-[var(--color-ivory)]"
+              className="inline-flex items-center gap-2 border border-[var(--color-ink)] px-7 py-3.5 text-[11px] uppercase tracking-luxe transition hover:bg-[var(--color-green)] hover:text-[var(--color-paper)]"
             >
               <IconWhatsApp className="h-4 w-4" /> WhatsApp us
             </a>
             <Link
               href="/contact"
-              className="border border-black/15 px-7 py-3.5 text-[11px] uppercase tracking-luxe transition hover:border-[var(--color-ink)]"
+              className="border border-[var(--color-ink)]/15 px-7 py-3.5 text-[11px] uppercase tracking-luxe transition hover:border-[var(--color-green)]"
             >
               Contact page
             </Link>
